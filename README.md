@@ -8,6 +8,7 @@
 ## 🧭 Sumário
 
 * [Plataforma Usada e Justificativa](#plataforma-usada-e-justificativa)
+* [Wireframe e Fluxo de Conversa (Design)](#wireframe-e-fluxo-de-conversa)
 * [Como Testar o Chatbot](#como-testar-o-chatbot)
 * [Onde Alterar Configurações (Catálogo e Descontos)](#onde-alterar-configurações-catálogo-e-descontos)
 * [Endpoints e Payload Usados](#endpoints-e-payload-usados)
@@ -21,6 +22,19 @@
 
 **Motivo da escolha:**
 O Blip foi escolhido por ser uma plataforma *low-code* robusta com a qual possuo familiaridade. Sua interface no **Builder** suporta nativamente todas as integrações obrigatórias do desafio, como requisições HTTP (`ViaCEP`, `BrasilAPI`) e a implementação de lógica de condições complexas para **validação de dados** (`CPF`, `telefone`) e **cálculo de preços**. A possibilidade de centralizar as configurações em um serviço externo (Google Sheets) demonstra modularidade e facilidade na manutenção.
+
+---
+
+## 🎨 Wireframe e Fluxo de Conversa (Design)
+
+Para garantir uma experiência de usuário (UX) fluida e um desenvolvimento eficiente, todo o fluxo de conversação do chatbot foi primeiramente desenhado e prototipado no **Figma**.
+
+### Benefícios do uso do Figma:
+
+* **Mapeamento Visual:** Foi criado um *wireframe* completo que mapeia visualmente cada passo, condições lógicas e transição de blocos, espelhando a estrutura final implementada no Blip Builder.
+* **Planejamento de Copy:** O Figma serviu como um **Storytelling Canvas**, permitindo o planejamento e a revisão da *copy* em um ambiente visual, otimizando a clareza, empatia e persuasão das mensagens.
+* **Estrutura de Dados:** O fluxo detalha os pontos de coleta de dados do *lead* (Nome, CPF, etc.) e os momentos exatos das integrações com APIs e do cálculo de descontos, garantindo que o *payload* final seja montado com todas as variáveis necessárias.
+* **Validação de Regras:** O design visual facilitou a validação das regras de negócio, como o limite máximo de desconto de 20% e as condições para o desconto de urgência.
 
 ---
 
@@ -54,9 +68,15 @@ https://docs.google.com/spreadsheets/d/18bbxAr-0kPqzZ24JCfm5QLfk-Ue55_GWurG6RpYl
 
 | Parâmetro (Colunas do Sheet) | Propósito e Alteração |
 | :--- | :--- |
-| **`preco_base`** | Altere o preço base de cada curso. |
-| **`matricula_deadline`** | Edite esta data (Formato: `YYYY-MM-DD`) para influenciar o cálculo do desconto de **Urgência**. |
-| **Parâmetros de Desconto** | As regras de desconto (ex: *Indicação de Amigo: -5%*, *Máximo: 20%*) são aplicadas via **Scripts** no Builder. Para alterá-las, edite o código dentro do bloco de cálculo. |
+| **`id`** | identificador do curso. Dinido por *g* (graduação) ou p (pós) - area - nome ou sigla. |
+| **`nivel`** | graduacao ou pos |
+| **`area`** | Área de especialização do curso |
+| **`nome`** | Nome do curso. |
+| **`preco_base`** | Preço base de cada curso. |
+| **`duracao`** | Tempo de duração. |
+| **`modalidade`** | EAD ou Presencial. |
+| **`principal_area`** | Principal área de atuação. |
+| **`cargos_possiveis`** | Possíveis cargos de atuação. |
 
 ---
 
@@ -95,7 +115,8 @@ https://docs.google.com/spreadsheets/d/18bbxAr-0kPqzZ24JCfm5QLfk-Ue55_GWurG6RpYl
   "uf": "{{uf}}",
   "nivel": "{{level}}",
   "area": "{{interestAreaJs}}",
-  "curso_escolhido": "{{choosedCourseName}}"
+  "curso_escolhido": "{{choosedCourseName}}",
+  "data_envio": "{{timesTempJs}}"
 }
 ```
 
