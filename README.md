@@ -7,13 +7,13 @@
 
 ## 🧭 Sumário
 
-* [Plataforma Usada e Justificativa](#plataforma-usada-e-justificativa)
-* [Wireframe e Fluxo de Conversa (Design)](#wireframe-e-fluxo-de-conversa)
-* [Como Testar o Chatbot](#como-testar-o-chatbot)
-* [Onde Alterar Configurações (Catálogo e Descontos)](#onde-alterar-configurações-catálogo-e-descontos)
-* [Endpoints e Payload Usados](#endpoints-e-payload-usados)
-* [Casos de Teste (5 Cenários)](#casos-de-teste-5-cenários)
-* [Observação sobre o Aviso de Feriado](#observação-sobre-o-aviso-de-feriado)
+* Plataforma Usada e Justificativa
+* Wireframe e Fluxo de Conversa (Design)
+* Como Testar o Chatbot
+* Onde Alterar Configurações (Catálogo e Descontos)
+* Endpoints e Payload Usados
+* Casos de Teste (5 Cenários)
+* Observação sobre o Aviso de Feriado
 
 ---
 
@@ -36,6 +36,8 @@ Para garantir uma experiência de usuário (UX) fluida e um desenvolvimento efic
 * **Planejamento de Copy:** O Figma serviu como um **Storytelling Canvas**, permitindo o planejamento e a revisão da *copy* em um ambiente visual, otimizando a clareza, empatia e persuasão das mensagens.
 * **Estrutura de Dados:** O fluxo detalha os pontos de coleta de dados do *lead* (Nome, CPF, etc.) e os momentos exatos das integrações com APIs e do cálculo de descontos, garantindo que o *payload* final seja montado com todas as variáveis necessárias.
 * **Validação de Regras:** O design visual facilitou a validação das regras de negócio, como o limite máximo de desconto de 20% e as condições para o desconto de urgência.
+
+**Você pode acessar o WireFrame por aqui:** 👉 https://www.figma.com/design/hBkbuatqSQ0FmHg58a0xEs/Faculdade-Zaffalon-Teste--A?node-id=0-1&t=VWvqxjNM8rYf2CRb-1
 
 ---
 
