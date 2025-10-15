@@ -95,8 +95,7 @@ https://docs.google.com/spreadsheets/d/18bbxAr-0kPqzZ24JCfm5QLfk-Ue55_GWurG6RpYl
   "uf": "{{uf}}",
   "nivel": "{{level}}",
   "area": "{{interestAreaJs}}",
-  "curso_escolhido": "{{choosedCourseName}}",
-  "data_envio": "{{timesTempJs}}"
+  "curso_escolhido": "{{choosedCourseName}}"
 }
 ```
 
