@@ -137,9 +137,9 @@ https://docs.google.com/spreadsheets/d/18bbxAr-0kPqzZ24JCfm5QLfk-Ue55_GWurG6RpYl
 
 ## 📢 Observação sobre o Aviso de Feriado
 
-[cite_start]Para demonstrar a funcionalidade de integração com a **BrasilAPI – Feriados**[cite: 46], foi inserida uma data futura próxima à do Feriado da Proclamação da República (15 de Novembro).
+Para demonstrar a funcionalidade de integração com a **BrasilAPI – Feriados**, foi inserida uma data futura próxima à do Feriado da Proclamação da República (15 de Novembro).
 
-* [cite_start]**Comportamento Atual:** Se você avançar para o atendimento humano, notará o aviso de que o **horário de atendimento está reduzido**[cite: 47]. [cite_start]Este comportamento foi forçado para exemplificar o funcionamento do *bot* caso um feriado estivesse realmente próximo ($\leq 3$ dias)[cite: 46].
+* **Comportamento Atual:** Se você avançar para o atendimento humano, notará o aviso de que o **horário de atendimento está reduzido**. Este comportamento foi forçado para exemplificar o funcionamento do *bot* caso um feriado estivesse realmente próximo ($\leq 3$ dias).
 
 * **Como Desativar o Aviso (Instrução Técnica):**
 
