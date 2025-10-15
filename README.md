@@ -37,7 +37,7 @@ Para garantir uma experiência de usuário (UX) fluida e um desenvolvimento efic
 * **Estrutura de Dados:** O fluxo detalha os pontos de coleta de dados do *lead* (Nome, CPF, etc.) e os momentos exatos das integrações com APIs e do cálculo de descontos, garantindo que o *payload* final seja montado com todas as variáveis necessárias.
 * **Validação de Regras:** O design visual facilitou a validação das regras de negócio, como o limite máximo de desconto de 20% e as condições para o desconto de urgência.
 
-**Você pode acessar o WireFrame por aqui:** 👉 https://www.figma.com/design/hBkbuatqSQ0FmHg58a0xEs/Faculdade-Zaffalon-Teste--A?node-id=0-1&t=VWvqxjNM8rYf2CRb-1
+**Você pode acessar o WireFrame por aqui:** 👉 https://www.figma.com/design/hBkbuatqSQ0FmHg58a0xEs/Faculdade-Zaffalon-Teste-Mais-A?node-id=0-1&t=VWvqxjNM8rYf2CRb-1
 
 ---
 
