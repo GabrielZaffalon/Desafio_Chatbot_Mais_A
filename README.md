@@ -13,6 +13,7 @@
 * [Onde Alterar Configurações (Catálogo e Descontos)](#onde-alterar-configurações-catálogo-e-descontos)
 * [Endpoints e Payload Usados](#endpoints-e-payload-usados)
 * [Casos de Teste (5 Cenários)](#casos-de-teste-5-cenários)
+* [Observação sobre o Aviso de Feriado](#observação-sobre-o-aviso-de-feriado)
 
 ---
 
@@ -131,3 +132,25 @@ https://docs.google.com/spreadsheets/d/18bbxAr-0kPqzZ24JCfm5QLfk-Ue55_GWurG6RpYl
 | **3. Desconto Máximo** | Ativar as 4 regras de desconto: Amigo (**−5%**), Cartão (**−5%**), Trabalha na Área (**−10%** - Apenas Pós), Urgência (**−7%**). | O *bot* deve calcular o total (27%), mas limitar o desconto final ao teto de **20%.** |
 | **4. Sem Cursos Compatíveis** | Escolher **Pós-Graduação** e uma **Área** que não tenha cursos no catálogo (ex: Saúde, se só tiver 1 curso de Pós em TI). | O *bot* deve informar que não encontrou cursos compatíveis e oferecer o contato com um "Zaffer" (atendente). |
 | **5. Opt-Out a Qualquer Momento** | Inserir o comando **“parar”** no meio da coleta de dados (ex: após o telefone). | O *bot* deve interromper imediatamente o fluxo principal e direcionar para o bloco de encerramento amigável. |
+
+---
+
+## 📢 Observação sobre o Aviso de Feriado
+
+[cite_start]Para demonstrar a funcionalidade de integração com a **BrasilAPI – Feriados**[cite: 46], foi inserida uma data futura próxima à do Feriado da Proclamação da República (15 de Novembro).
+
+* [cite_start]**Comportamento Atual:** Se você avançar para o atendimento humano, notará o aviso de que o **horário de atendimento está reduzido**[cite: 47]. [cite_start]Este comportamento foi forçado para exemplificar o funcionamento do *bot* caso um feriado estivesse realmente próximo ($\leq 3$ dias)[cite: 46].
+
+* **Como Desativar o Aviso (Instrução Técnica):**
+
+    O aviso de feriado é controlado por um *Script* chamado **`nextHolidayJs`** que se encontra no bloco **`apiGetNationalHolidays`** no Blip Builder.
+
+    Para que o *bot* comece a usar a data atual e desativar o aviso (a menos que haja um feriado real próximo), altere o código nas linhas 13 e 21 do *script*, substituindo:
+
+    ```javascript
+    const d = new Date("2025-11-15"); 
+    ```
+    pela variável de data atual:
+    ```javascript
+    const d = new Date();
+    ```
